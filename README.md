@@ -42,7 +42,7 @@ Visualizes how different sorting algorithms operate step-by-step.
 * Heap Sort
 
 🔗 **Visit:** 
-https://sortviz-visualizer.vercel.app/
+https://sortviz-visualizer.vercel.app/   <br>
 📌 **Repository:**
 https://github.com/jaiisshhh/Sorting-Visualizer
 
@@ -67,7 +67,7 @@ Simulates graph traversal and shortest-path algorithms on a grid.
 * Greedy Best First Search
 
 🔗 **Visit :**
-https://path-viz-pathfinding-visualizer.vercel.app/
+https://path-viz-pathfinding-visualizer.vercel.app/  <br>
 📌 **Repository:**
 https://github.com/jaiisshhh/Pathfinding-Visualizer
 
@@ -91,7 +91,7 @@ Demonstrates CPU scheduling algorithms used in operating systems.
 * Priority Scheduling and many more
 
 🔗 **Visit :** 
-https://os-process-scheduling-vizualizer.vercel.app/
+https://os-process-scheduling-vizualizer.vercel.app/ <br>
 📌 **Repository:**
 https://github.com/jaiisshhh/Process-Scheduler
 
