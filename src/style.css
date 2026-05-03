@@ -545,6 +545,21 @@ a {
   padding-top: 0.35rem;
 }
 
+.lab-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.lab-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
 .footer-links a:hover {
   color: var(--text);
 }

@@ -3,7 +3,7 @@ const visualizers = [
     title: "Pathfinding Studio",
     eyebrow: "Grid Intelligence",
     description:
-      "Build mazes, place walls, and watch Dijkstra's and A* turn chaos into the shortest possible route.",
+      "Build mazes and watch Dijkstra’s and A* find the shortest path.",
     stats: ["Dijkstra's", "A*", "Custom grids"],
     url: "https://path-viz-pathfinding-visualizer.vercel.app/",
     accent: "teal",
@@ -12,8 +12,7 @@ const visualizers = [
   {
     title: "Sorting Motion",
     eyebrow: "Array Transformations",
-    description:
-      "See every comparison, swap, and divide step unfold with sorting algorithms that make time complexity feel real.",
+    description: "See comparisons and swaps unfold across sorting algorithms.",
     stats: ["Merge Sort", "Quick Sort", "Bubble Sort"],
     url: "https://sortviz-visualizer.vercel.app/",
     accent: "orange",
@@ -22,8 +21,7 @@ const visualizers = [
   {
     title: "Scheduler Deck",
     eyebrow: "CPU Simulation",
-    description:
-      "Understand process scheduling with visual timelines for FCFS, SJF, and Round Robin across competing jobs.",
+    description: "Visualize how CPU scheduling algorithms manage processes.",
     stats: ["FCFS", "SJF", "Round Robin"],
     url: "https://os-process-scheduling-vizualizer.vercel.app/",
     accent: "blue",
@@ -33,16 +31,16 @@ const visualizers = [
 
 const featurePoints = [
   {
-    title: "One home for all three tools",
-    text: "Algo Lab gives your projects a single identity, which makes the whole set feel like a product instead of separate demos.",
+    title: "Understand, not memorize",
+    text: "Watch algorithms step through each operation so you actually grasp how they work.",
   },
   {
-    title: "Built for visual learning",
-    text: "The design focuses on motion, contrast, and structure so each section reinforces exploration and discovery.",
+    title: "Learn by experimenting",
+    text: "Change inputs, control speed, and see how different algorithms behave.",
   },
   {
-    title: "Ready to grow with React",
-    text: "Cards, data, navigation, themes, and future filters can all be managed as reusable components instead of static HTML.",
+    title: "Compare approaches",
+    text: "See differences in efficiency and behavior across multiple algorithms in real time.",
   },
 ];
 
@@ -77,36 +75,32 @@ function App() {
                 Your algorithm playground, unified
               </div>
               <h1>
-                Bring scheduling, pathfinding, and sorting into one bold home:
+                Visualize algorithms. Understand them faster.
                 <span> Algo Lab.</span>
               </h1>
               <p className="hero-text">
-                Turn three separate visualizers into one polished experience
-                with a strong identity, a cleaner user journey, and a design
-                that feels modern from the first second.
+                Explore how algorithms work step-by-step. Compare approaches,
+                control inputs, and build intuition through visualization.
               </p>
 
               <div className="hero-actions">
                 <a className="button button-primary" href="#visualizers">
                   Explore the labs
                 </a>
-                <a className="button button-secondary" href="#why">
-                  Why it works
-                </a>
               </div>
 
               <div className="hero-metrics">
                 <div>
                   <strong>3</strong>
-                  <span>Core visualizers</span>
+                  <span>Core modules</span>
                 </div>
                 <div>
                   <strong>1</strong>
-                  <span>Unified brand system</span>
+                  <span>Interactive simulations</span>
                 </div>
                 <div>
                   <strong>∞</strong>
-                  <span>Room to expand</span>
+                  <span>Room for learning</span>
                 </div>
               </div>
             </div>
@@ -120,20 +114,24 @@ function App() {
               </div>
               <div className="panel-grid">
                 <div className="panel-card">
-                  <span className="panel-label">Pathfinding</span>
-                  <strong>Search the shortest route</strong>
+                  <span className="panel-label">Pathfinding: </span>
+                  <strong>
+                    Find shortest paths using Dijkstra, BFS, and more.
+                  </strong>
                 </div>
                 <div className="panel-card">
-                  <span className="panel-label">Sorting</span>
-                  <strong>Compare movement and speed</strong>
+                  <span className="panel-label">Sorting: </span>
+                  <strong>Compare sorting algorithms step-by-step.</strong>
                 </div>
                 <div className="panel-card">
-                  <span className="panel-label">Scheduling</span>
-                  <strong>Visualize CPU decisions</strong>
+                  <span className="panel-label">Scheduling: </span>
+                  <strong>Understand CPU scheduling decisions visually.</strong>
                 </div>
                 <div className="panel-card glass-card">
-                  <span className="panel-label">Next step</span>
-                  <strong>Add algorithm details, controls, and themes</strong>
+                  <span className="panel-label">Next step: </span>
+                  <strong>
+                    More algorithms, controls, and customization coming soon.
+                  </strong>
                 </div>
               </div>
             </div>
@@ -144,26 +142,35 @@ function App() {
           <div className="container">
             <div className="section-heading">
               <p className="section-kicker">Featured labs</p>
-              <h2>Your three visualizers, presented like a real product</h2>
+              <h2>Explore algorithms through interactive labs</h2>
               <p>
-                Each card uses a different accent while staying inside one calm,
-                premium color system. That gives variety without losing visual
-                consistency.
+                Each lab lets you experiment with inputs, visualize execution,
+                and compare different approaches in real time.
               </p>
             </div>
 
             <div className="card-grid">
               {visualizers.map((item) => (
-                <article className={`lab-card ${item.accent}`} key={item.title}>
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className={`lab-card ${item.accent}`}
+                  key={item.title}
+                >
                   <div className={`card-visual ${item.accent}`}>
                     <img src={item.image} alt={`${item.title} preview`} />
                     <div className="preview-tint" />
                     <div className="preview-glow" />
                   </div>
+
                   <div className="card-content">
                     <div className="card-topline">{item.eyebrow}</div>
+
                     <h3>{item.title}</h3>
+
                     <p>{item.description}</p>
+
                     <div className="chip-row">
                       {item.stats.map((stat) => (
                         <span className="chip" key={stat}>
@@ -171,16 +178,10 @@ function App() {
                         </span>
                       ))}
                     </div>
-                    <a
-                      className="card-link"
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      Open visualizer
-                    </a>
+
+                    <span className="card-link">Launch →</span>
                   </div>
-                </article>
+                </a>
               ))}
             </div>
           </div>
@@ -189,10 +190,7 @@ function App() {
         <section className="section section-alt" id="why">
           <div className="container">
             <div className="section-heading narrow">
-              <p className="section-kicker">Why this landing works better</p>
-              <h2>
-                A cleaner structure helps the visualizers feel more credible
-              </h2>
+              <p className="section-kicker">Why use Algo Lab?</p>
             </div>
 
             <div className="feature-grid">
